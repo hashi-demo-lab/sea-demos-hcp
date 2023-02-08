@@ -30,12 +30,12 @@ variable "vpc_cidr" {
 
 variable "public_subnets" {
   description = "Public subnets"
-  type        = list
+  type        = list(any)
 }
 
 variable "private_subnets" {
   description = "Private subnets"
-  type        = list
+  type        = list(any)
 }
 
 variable "eks_cluster_version" {
@@ -70,5 +70,5 @@ variable "hcp_hvn_cidr" {
 
 variable "consul_serf_lan_port" {
   description = "Consul serf lan port"
-  type        = number  
+  type        = number
 }

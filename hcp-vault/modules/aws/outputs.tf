@@ -23,7 +23,7 @@ output "security_group_consul_id" {
   value       = module.sg-consul.security_group_id
 }
 
-output "tgw_id"{
+output "tgw_id" {
   value = module.tgw.ec2_transit_gateway_id
 }
 

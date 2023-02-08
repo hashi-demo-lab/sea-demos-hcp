@@ -28,7 +28,7 @@ resource "aws_instance" "bastion" {
   key_name        = var.key_pair_key_name
   subnet_id       = element(module.vpc.public_subnets, 1)
   security_groups = [module.sg-ssh.security_group_id]
-  
+
   lifecycle {
     ignore_changes = all
   }
@@ -39,10 +39,10 @@ resource "aws_instance" "bastion" {
   }
 
   connection {
-    host          = aws_instance.bastion.public_dns
-    user          = "ubuntu"
-    agent         = false
-    private_key   = local.key_pair_private_key
+    host        = aws_instance.bastion.public_dns
+    user        = "ubuntu"
+    agent       = false
+    private_key = local.key_pair_private_key
   }
 
   provisioner "file" {

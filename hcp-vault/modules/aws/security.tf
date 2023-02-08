@@ -1,9 +1,9 @@
 module "sg-ssh" {
-  source = "terraform-aws-modules/security-group/aws"
-  version     = "4.9.0"
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "4.9.0"
 
-  name        = "${var.deployment_id}-ssh"
-  vpc_id      = module.vpc.vpc_id
+  name   = "${var.deployment_id}-ssh"
+  vpc_id = module.vpc.vpc_id
 
   ingress_with_cidr_blocks = [
     {
@@ -21,11 +21,11 @@ module "sg-ssh" {
 }
 
 module "sg-consul" {
-  source = "terraform-aws-modules/security-group/aws"
-  version     = "4.9.0"
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "4.9.0"
 
-  name        = "${var.deployment_id}-consul"
-  vpc_id      = module.vpc.vpc_id
+  name   = "${var.deployment_id}-consul"
+  vpc_id = module.vpc.vpc_id
 
   ingress_with_cidr_blocks = [
     {

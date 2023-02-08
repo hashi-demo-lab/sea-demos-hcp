@@ -19,7 +19,7 @@ variable "aws_vpc_cidr" {
   type        = string
 }
 
-variable "aws_tgw_id"{
+variable "aws_tgw_id" {
   description = "AWS EC2 transit gateway id"
   type        = string
 }
