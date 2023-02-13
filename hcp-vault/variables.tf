@@ -20,14 +20,6 @@ variable "ttl" {
   default     = 48
 }
 
-// enable & disable modules
-
-variable "enable_cts_aws" {
-  description = "Deploy Consul-Terraform-Sync node in Amazon Web Services (AWS)"
-  type        = bool
-  default     = false
-}
-
 // hashicorp cloud platform (hcp) variables
 
 variable "hcp_region" {
@@ -52,18 +44,6 @@ variable "hcp_hvn_cidr" {
   description = "HCP HVN cidr"
   type        = string
   default     = "172.25.16.0/20"
-}
-
-variable "hcp_consul_tier" {
-  description = "HCP Consul cluster tier"
-  type        = string
-  default     = "development"
-}
-
-variable "hcp_consul_min_version" {
-  description = "HCP Consul minimum version"
-  type        = string
-  default     = "1.14.2"
 }
 
 variable "hcp_vault_tier" {
@@ -140,12 +120,6 @@ variable "aws_eks_worker_desired_capacity" {
   default     = 2
 }
 
-variable "aws_ami_consul_terraform_sync" {
-  description = "AWS AMI for consul-terraform-sync"
-  type        = string
-  default     = "ami-0fc2c7bc0d520a239"
-}
-
 variable "aws_ami_hashicups_product_api_db" {
   description = "AWS AMI for hashicups product-api-db"
   type        = string
@@ -183,39 +157,6 @@ variable "gcp_gke_cluster_service_cidr" {
   type        = string
   default     = "172.20.0.0/18"
 }
-
-// hashicorp self-managed consul variables
-
-variable "consul_helm_chart_version" {
-  type        = string
-  description = "Helm chart version"
-  default     = "1.0.2"
-}
-
-variable "consul_version" {
-  description = "Consul version"
-  type        = string
-  default     = "1.14.2-ent"
-}
-
-variable "consul_ent_license" {
-  description = "Consul enterprise license"
-  type        = string
-  default     = ""
-}
-
-variable "consul_replicas" {
-  description = "Number of Consul replicas"
-  type        = number
-  default     = 1
-}
-
-variable "consul_serf_lan_port" {
-  description = "Consul serf lan port"
-  type        = number
-  default     = 9301
-}
-
 
 ### workspace variables
 

@@ -67,8 +67,3 @@ variable "hcp_hvn_cidr" {
   description = "HCP HVN cidr"
   type        = string
 }
-
-variable "consul_serf_lan_port" {
-  description = "Consul serf lan port"
-  type        = number
-}

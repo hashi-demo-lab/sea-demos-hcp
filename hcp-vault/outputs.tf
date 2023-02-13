@@ -12,16 +12,6 @@ output "aws_bastion_public_fqdn" {
   value       = module.infra-aws.bastion_public_fqdn
 }
 
-# output "aws_consul_ingress_gateway_public_fqdn" {
-#   description = "Consul ingress gateway fqdn"
-#   value       = "http://${module.consul-server-aws.ingress_gateway_public_fqdn}"
-# }
-
-# output "aws_grafana_public_fqdn" {
-#   description = "Grafana public fqdn"
-#   value       = "http://${module.grafana.public_fqdn}"
-# }
-
 // hashiCorp cloud platform (hcp) outputs
 
 output "hcp_vault_admin_token" {

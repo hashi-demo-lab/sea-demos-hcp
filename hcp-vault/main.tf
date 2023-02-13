@@ -66,7 +66,6 @@ module "infra-aws" {
   eks_worker_desired_capacity = var.aws_eks_worker_desired_capacity
   hcp_hvn_provider_account_id = module.hcp-hvn.provider_account_id
   hcp_hvn_cidr                = var.hcp_hvn_cidr
-  consul_serf_lan_port        = var.consul_serf_lan_port
 }
 
 // hcp vault
