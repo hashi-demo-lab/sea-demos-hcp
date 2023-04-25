@@ -245,7 +245,7 @@ variable "variables" {
       "hcl" : false
     },
     "VAULT_ADDR" : {
-      "value" : "http://localhost:8200",
+      "value" : "http://vault-dc1-active:8200",
       "description" : "",
       "category" : "env",
       "sensitive" : false,
@@ -303,7 +303,7 @@ variable "workspace_plan_access_emails" {
 variable "agent_pool_name" {
   type        = string
   description = "(Optional) Name of the agent pool that will be created or used"
-  default     = null
+  default     = "AaronPool"
 }
 
 variable "workspace_agents" {
