@@ -10,7 +10,7 @@ resource "random_string" "suffix" {
 // terraform cloud workspace onboarding
 
 module "tfc-workspace-onboarding" {
-  source = "github.com/hashicorp-demo-lab/terraform-tfe-onboarding-module"
+  source = "github.com/hashi-demo-lab/terraform-tfe-onboarding-module"
 
   organization                  = var.organization
   create_project                = var.create_project
