@@ -1,0 +1,5 @@
+ssh -i "vault-deploy.pem" ubuntu@{aws_bastion_public_fqdn}
+export VAULT_NAMESPACE=admin
+export VAULT_ADDR={HCP_VAULT_ADDRESS}
+SIGNATURE=$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/rsa2048 | tr -d '\n')
+vault write auth/aws/login role=dev-role pkcs7=$SIGNATURE nonce={insert_nonce}
