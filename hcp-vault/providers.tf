@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "hashi-demos-apj"
     workspaces {
-      name = "aaron-sea-demo-hcp-vault"
+      name = "hcp-vault"
     }
   }
   required_providers {
